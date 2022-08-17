@@ -1,5 +1,5 @@
 const axios = require("axios");
-const { WorldDataModel } = require("../model/worldData");
+const { WorldDataModel } = require("../../model/worldData");
 
 const options = {
     method: "GET",

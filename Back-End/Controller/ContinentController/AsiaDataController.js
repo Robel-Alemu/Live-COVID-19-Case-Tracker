@@ -1,6 +1,6 @@
 const axios = require("axios");
 
-const { AsiaData } = require("../model/AsiaData");
+const { AsiaData } = require("../../model/AsiaData");
 
 let result = new Array(AsiaData);
 

@@ -2,15 +2,15 @@ const express = require("express");
 
 const {
     WorldData
-} = require("../Controller/AllWorldDataController");
+} = require("../Controller/ContinentController/AllWorldDataController");
 
 const {
     AllAsiaData
-} = require("../Controller/AsiaDataController");
+} = require("../Controller/ContinentController/AsiaDataController");
 
 const {
     AfricaData
-} = require("../Controller/AfircaDataController");
+} = require("../Controller/ContinentController/AfircaDataController");
 
 
 const router = express.Router(); 
