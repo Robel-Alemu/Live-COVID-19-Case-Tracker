@@ -14,8 +14,23 @@ const options = {
   }
 };
 
-axios.request(options).then(function (response) {
-	console.log(response.data);
-}).catch(function (error) {
-	console.error(error);
-});
+ 
+const AllAsiaData = async (req,res) => {
+    result =
+     await axios
+      .request(options)
+      .then((response) => {
+         return response.data;
+      })
+      .catch(function (error) {
+        console.error(error);
+        res.send({Message: error});
+      });
+   
+  
+     
+      // console.log(result)
+      res.send(result);
+  };
+
+  module.exports = {AllAsiaData};
