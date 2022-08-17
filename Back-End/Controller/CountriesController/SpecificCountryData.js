@@ -15,8 +15,8 @@ const options = {
   };
 
  
-const AllCountriesData = async (req,res) => {
-
+const SpecificCountryData = async (req,res) => {
+    let countryName = req.params.countryName
     result =
      await axios
       .request(options)
@@ -28,10 +28,13 @@ const AllCountriesData = async (req,res) => {
         res.send({Message: error});
       });
    
-
- 
-    
-      res.send(result);
+      let filteredCountry = result.filter(function(Data){
+       
+        return Data.Country == countryName;
+     })
+     
+      // console.log(result)
+      res.send(filteredCountry);
   };
 
-  module.exports = {AllCountriesData};
+  module.exports = {SpecificCountryData};

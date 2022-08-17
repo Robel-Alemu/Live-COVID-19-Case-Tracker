@@ -32,6 +32,10 @@ const {
     AllCountriesData
 } = require("../Controller/CountriesController/AllCountriesDataController");
 
+const {
+    SpecificCountryData
+} = require("../Controller/CountriesController/SpecificCountryData");
+
 
 const router = express.Router(); 
 
@@ -43,6 +47,7 @@ router.get("/europe-data", EuropeData);
 router.get("/north-america-data", NorthAmericaData);
 router.get("/south-america-data", SouthAmericaData);
 router.get("/all-countries-data", AllCountriesData);
+router.get("/specific-country-data/:countryName", SpecificCountryData);
 
 
 module.exports = {
