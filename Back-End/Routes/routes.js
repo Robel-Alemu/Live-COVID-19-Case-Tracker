@@ -28,6 +28,10 @@ const {
     SouthAmericaData
 } = require("../Controller/ContinentController/SouthAmericaDataController");
 
+const {
+    AllCountriesData
+} = require("../Controller/CountriesController/AllCountriesDataController");
+
 
 const router = express.Router(); 
 
@@ -38,6 +42,7 @@ router.get("/australia-data", AustraliaAndOceanianData);
 router.get("/europe-data", EuropeData);
 router.get("/north-america-data", NorthAmericaData);
 router.get("/south-america-data", SouthAmericaData);
+router.get("/all-countries-data", AllCountriesData);
 
 
 module.exports = {
